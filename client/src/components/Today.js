@@ -55,12 +55,3 @@ class Today extends Component {
 }
 
 export default Today;
-
-/*
-
-            {students.map((s, si) => (
-              <tr key={si}>
-                <td>{s.firstname}</td>
-              </tr>
-            ))}
-						*/
