@@ -13,5 +13,5 @@ node server.js
 ## Start react
 
 ```
-npm run
+npm run start
 ```
