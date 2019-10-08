@@ -1,17 +1,11 @@
 ## Install 
 
 ```
-npm install
+yarn && cd client && yarn
 ```
 
-## Start server
+## Start
 
 ```
-node server.js
-```
-
-## Start react
-
-```
-npm run start
+npm run dev
 ```
