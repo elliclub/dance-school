@@ -1,7 +1,7 @@
 ## Install 
 
 ```
-yarn && cd client && yarn
+yarn && cd client && yarn && cd ..
 ```
 
 ## Start
