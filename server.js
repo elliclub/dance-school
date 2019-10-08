@@ -130,7 +130,7 @@ let student = [
 let teachers = [
   {
     firstname: "Kristian",
-    lastname: "Kjeldsen",
+    lastname: "karlsson",
     age: 46,
     classes: ["Street dance", "Balett"],
   },
@@ -141,8 +141,8 @@ let teachers = [
     classes: ["House", "Bachata"],
   },
   {
-    firstname: "Boose",
-    lastname: "Bus",
+    firstname: "Elvira",
+    lastname: "Busch",
     age: 38,
     classes: ["Tango", "Bollywood"],
   },
@@ -160,7 +160,7 @@ let classes = [
       "2019-10-08",
     ],
     start: "18.00",
-    length: 2,
+    length: "2",
   },
   {
     name: "Balett",
@@ -173,7 +173,7 @@ let classes = [
       "2019-10-08",
     ],
     start: "17.00",
-    length: 3,
+    length: "3",
   },
   {
     name: "Tango",
@@ -186,7 +186,7 @@ let classes = [
       "2019-11-01",
     ],
     start: "16.00",
-    length: 4,
+    length: "4",
   },
   {
     name: "House",
@@ -231,11 +231,8 @@ const capitalize = function(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
-// todo: functions to return number of students of a class, which dates a student/teacher has depending on classes
-
 let res;
 
-//Routes
 app.get("/api/student", function(req, res) {
   res.json(student);
 });
@@ -244,7 +241,6 @@ app.get("/api/teachers", function(req, res) {
   res.json(teachers);
 });
 
-// todo add classes endpoint
 app.get("/api/classes", function(req, res) {
   res.json(classes);
 });

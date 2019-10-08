@@ -51,7 +51,17 @@ class App extends Component {
                 />
               )}
             />
-            <Route path="/comming" component={CommingClass} />
+            <Route
+              path="/comming"
+              render={props => (
+                <CommingClass
+                  {...props}
+                  students={this.state.students}
+                  classes={this.state.classes}
+                  teachers={this.state.teachers}
+                />
+              )}
+            />
             <Route path="/ended" component={EndedClass} />
           </div>
         </div>

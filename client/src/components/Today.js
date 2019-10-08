@@ -12,7 +12,6 @@ class Today extends Component {
         const currentTeacher = teachers.filter(
           t => t.classes.indexOf(c.name) !== -1
         );
-
         if (currentTeacher.length) {
           c.teacher = currentTeacher[0];
         }
