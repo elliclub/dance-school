@@ -4,6 +4,7 @@ import Today from "./components/Today";
 import CommingClass from "./components/Comming";
 import EndedClass from "./components/Ended";
 import ApiService from "./services/ApiService";
+import Styles from "./index.css";
 
 class App extends Component {
   state = {
@@ -24,7 +25,9 @@ class App extends Component {
     return (
       <HashRouter>
         <div>
-          <h1>Dance You Off</h1>
+          <div className="title">
+            <h1>Dance You Off</h1>
+          </div>
           <ul className="header">
             <li>
               <NavLink exact to="/">
@@ -62,7 +65,17 @@ class App extends Component {
                 />
               )}
             />
-            <Route path="/ended" component={EndedClass} />
+            <Route
+              path="/ended"
+              render={props => (
+                <EndedClass
+                  {...props}
+                  students={this.state.students}
+                  classes={this.state.classes}
+                  teachers={this.state.teachers}
+                />
+              )}
+            />
           </div>
         </div>
       </HashRouter>
