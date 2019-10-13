@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./index.css";
 
 class Today extends Component {
   currentClasses() {
@@ -26,7 +27,7 @@ class Today extends Component {
     const classes = this.currentClasses();
 
     return (
-      <div>
+      <div className="container">
         <h2>Dagens klasser</h2>
         <table id="student-classes" className="table">
           <thead>

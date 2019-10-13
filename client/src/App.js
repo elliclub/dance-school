@@ -4,7 +4,7 @@ import Today from "./components/Today";
 import CommingClass from "./components/Comming";
 import EndedClass from "./components/Ended";
 import ApiService from "./services/ApiService";
-import Styles from "./index.css";
+import  "./index.css";
 
 class App extends Component {
   state = {
@@ -25,20 +25,22 @@ class App extends Component {
     return (
       <HashRouter>
         <div>
-          <div className="title">
-            <h1>Dance You Off</h1>
-          </div>
+          <div className="title" />
           <ul className="header">
             <li>
-              <NavLink exact to="/">
+              <NavLink className="links" exact to="/">
                 Dagens klasser
               </NavLink>
             </li>
             <li>
-              <NavLink to="/comming">Kommande</NavLink>
+              <NavLink className="links" to="/comming">
+                Kommande klasser
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/ended">Avslutade</NavLink>
+              <NavLink className="links" to="/ended">
+                Avslutade klasser
+              </NavLink>
             </li>
           </ul>
           <div className="content">

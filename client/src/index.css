@@ -6,9 +6,19 @@
 .header {
   display: flex;
   justify-content: space-around;
+  font-size: 28px;
+}
+.links {
+  text-decoration: none;
+}
+.active,
+.btn:hover {
+  color: grey;
+  border-bottom: 1px solid black;
 }
 ul {
   list-style-type: none;
+  text-decoration: none;
 }
 
 .content {
