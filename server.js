@@ -4,17 +4,9 @@
 const express = require("express");
 const app = express();
 const port = 5000;
-const bodyParser = require("body-parser");
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
   next();
 });
 
@@ -226,12 +218,6 @@ let classes = [
     length: "1",
   },
 ];
-
-const capitalize = function(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-};
-
-let res;
 
 app.get("/api/student", function(req, res) {
   res.json(student);
